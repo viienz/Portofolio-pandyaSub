@@ -1,0 +1,828 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Ubuntu;
+  background-image: url("image/BGneww.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Style untuk Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #1a1a1a00; /* Transparan saat awal */
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 22px 20px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Animasi */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan ringan */
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #ff7340; /* Warna hover */
+  transform: scale(1.1); /* Efek zoom saat hover */
+}
+
+/* Efek Scroll */
+.scrolled {
+  background-color: #1a1a1a00; /* Warna lebih gelap saat scroll */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Tambahan bayangan */
+}
+
+/* Tambahkan margin untuk konten agar tidak tertutup navbar */
+body {
+  margin-top: 70px;
+}
+
+/* Teks Halaman Utama */
+.home-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #ffffff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+  background-image: url("image/BGneww.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin-top: 50px;
+}
+
+.main-text {
+  font-size: 3.5rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ffffff, #ff7340);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeInText 2s ease;
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dynamic-text {
+  color: #ff7340;
+  border-right: 2px solid #ff7340;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 4s steps(15) infinite, blink 1s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Section Style with Transparent Blur */
+.about-section {
+  background: rgba(0, 0, 0, 0.414); /* Transparansi hitam dengan opacity 50% */
+  backdrop-filter: blur(10px); /* Efek blur */
+  -webkit-backdrop-filter: blur(10px); /* Support untuk Safari */
+  color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.about-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  color: #ffff; /* Warna judul */
+}
+
+/* Content Layout */
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about-image {
+  flex: 1;
+  max-width: 500px;
+  margin: 0 auto 20px;
+}
+
+.about-image img {
+  width: 90%;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+}
+
+.about-text {
+  flex: 2;
+  max-width: 600px;
+  text-align: left;
+  padding: 0 20px;
+}
+
+.about-text h3 {
+  font-size: 28px;
+  color: #ff7340;
+  margin-bottom: 15px;
+}
+
+.about-text p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.about-text .btn {
+  display: inline-block;
+  background-color: #ff7340;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.about-text .btn:hover {
+  background-color: #d44626;
+  transform: scale(1.1);
+}
+
+/* Personal Section */
+.personal-section {
+    padding: 60px 40px;
+    background: rgba(0, 0, 0, 0.414);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: auto;
+}
+
+.container-person {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+/* Section Styling */
+.section {
+    flex: 1 1 calc(33.333% - 30px);
+    background: linear-gradient(135deg, #ff7340, rgba(253, 187, 45, 0.8));
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section h2 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Pendidikan (Timeline) */
+#education .timeline {
+    list-style: none;
+    padding: 0;
+}
+
+.timeline-item {
+    background: #00000070;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-item h3 {
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.timeline-item p {
+    font-size: 0.9rem;
+    color: #ffffff;
+}
+
+/* Motivator Section Styling */
+.motivator {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #ff7340, rgba(253, 187, 45, 0.8));
+  color: white;
+  border-radius: 10px;
+  margin: 30px auto;
+  max-width: auto;
+}
+
+.motivator h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.motivator-photo {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap; /* Mengatur layout responsif */
+  margin-top: 50px;
+}
+
+.motivator-photo img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover; /* Gambar rapi dengan rasio tetap */
+  border-radius: 50%; /* Membuat gambar melingkar */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.motivator-photo img:hover {
+  transform: scale(1.1); /* Zoom-in saat hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Styling untuk deskripsi */
+.photo-description {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.7); /* Background semi-transparan */
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  opacity: 0; /* Awalnya tersembunyi */
+  transition: opacity 0.3s ease;
+  transform: translateY(20px); /* Animasi naik */
+  text-align: center;
+  width: 80%; /* Ukuran deskripsi mengikuti gambar */
+  top: 50%; /* Center vertikal */
+  left: 50%; /* Center horizontal */
+  transform: translate(-50%, -50%); /* Align center */
+  pointer-events: none; /* Agar tidak mengganggu hover */
+}
+
+.motivator-photo img:hover + .photo-description,
+.photo-description:hover {
+  opacity: 1; /* Tampilkan deskripsi saat hover */
+  transform: translate(-50%, -50%) scale(1); /* Animasi smooth */
+}
+
+
+/* Section Skills */
+.skills {
+  background: linear-gradient(135deg, #ff7340, rgba(253, 187, 45, 0.8));
+  padding: 50px 20px;
+  border-radius: 20px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.skills .section-title {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.skills-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.skill-item {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 15px;
+  width: 150px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-item:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.skill-icon {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.skill-item:hover .skill-icon {
+  transform: rotate(10deg);
+}
+
+.skill-item p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 10px;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .skills-wrapper {
+      gap: 20px;
+  }
+
+  .skill-item {
+      width: 120px;
+      padding: 15px;
+  }
+
+  .skill-icon {
+      width: 50px;
+      height: 50px;
+  }
+
+  .skill-item p {
+      font-size: 14px;
+  }
+}
+
+/* Bagian Portfolio */
+.portfolio-section {
+  background: rgba(0, 0, 0, 0.414);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Transparan */
+  color: #fff;
+  height: 100vh;
+  padding: 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  backdrop-filter: blur(10px); /* Blur Transparan */
+}
+
+.portfolio-section h2 {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio-section h2 img {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+}
+
+.gambar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  height: 60%;
+  perspective: 1000px;
+  position: relative;
+}
+
+.kartu {
+  width: 200px;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  position: absolute;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Mengatur posisi awal untuk 4 kartu */
+.kartu:nth-child(1) {
+  transform: translateX(-400px) rotateY(30deg);
+  opacity: 0;
+}
+.kartu:nth-child(2) {
+  transform: translateX(-200px) rotateY(15deg);
+  opacity: 0.5;
+}
+.kartu:nth-child(3) {
+  transform: translateX(0) scale(1.1);
+  opacity: 1;
+}
+.kartu:nth-child(4) {
+  transform: translateX(200px) rotateY(-15deg);
+  opacity: 0.5;
+}
+.kartu:nth-child(5) {
+  transform: translateX(400px) rotateY(-30deg);
+  opacity: 0;
+}
+
+/* Untuk kartu tambahan di luar 4 kartu pertama */
+.kartu:nth-child(n + 6) {
+  opacity: 0;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .kartu {
+    width: 150px;
+    height: 225px;
+  }
+}
+
+/* Guestbook Section */
+#guestbook {
+  background: rgba(0, 0, 0, 0.414);
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  padding: 80px 50px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: auto;
+}
+
+#guestbook h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+/* Form Styling */
+#guestbook form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+#guestbook form input[type="text"],
+#guestbook form textarea {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#guestbook form input[type="text"]:focus,
+#guestbook form textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+#guestbook form textarea {
+  min-height: 100px;
+  resize: none;
+}
+
+#guestbook form button {
+  padding: 10px 15px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #ff7340;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#guestbook form button:hover {
+  background-color: #ff7340;
+  transform: scale(1.05);
+}
+
+/* Guest Messages */
+.guest-messages {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.guest-messages .message {
+  padding: 15px;
+  background-color: #ffffff;
+  border: 1px solid #333;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.guest-messages .message:hover {
+  transform: translateY(-5px);
+  background-color: #fbfbfb;
+}
+
+.guest-messages .message p {
+  margin: 0 0 10px;
+  color: #fff; /* Warna teks putih */
+  font-size: 1rem;
+}
+
+.guest-messages .message p strong {
+  font-size: 1.1rem;
+  color: #007bff; /* Warna nama */
+}
+
+.guest-messages .message a {
+  color: #ff4d4d; /* Warna tautan */
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease, text-decoration 0.2s ease;
+}
+
+.guest-messages .message a:hover {
+  color: #cc0000;
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #guestbook {
+    padding: 30px 15px;
+  }
+
+  #guestbook h2 {
+    font-size: 1.8rem;
+    text-align: center; /* Tambahan untuk sentralisasi */
+  }
+
+  #guestbook form input[type="text"],
+  #guestbook form textarea {
+    font-size: 0.9rem;
+  }
+
+  #guestbook form button {
+    font-size: 0.9rem;
+  }
+
+  .guest-messages .message {
+    padding: 10px;
+  }
+
+  .guest-messages .message p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Footer Styles */
+.footer {
+  background-color: rgba(0, 0, 0, 0.8); /* Warna gelap dengan transparansi */
+  color: #fff; /* Warna teks putih */
+  text-align: center;
+  padding: 10px;
+  font-size: 0.9em;
+  border-top: 1px solid rgba(255, 255, 255, 0); /* Garis pemisah atas */
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5); /* Bayangan lembut */
+}
+
+.footer-content p {
+  margin: 0;
+  padding: 10px 0;
+  font-size: 1em;
+}
+
+.footer .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Jarak antar ikon */
+  margin-top: 10px;
+}
+
+.footer .social-icons a {
+  color: #fff; /* Warna default ikon */
+  font-size: 1.2em; /* Ukuran ikon */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+  color: #ff6347; /* Warna saat hover */
+  transform: scale(1.2); /* Efek zoom saat hover */
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 40px 10px;
+  }
+
+  .contact-section h2 {
+    font-size: 2em;
+  }
+
+  .contact-section p {
+    font-size: 1em;
+  }
+
+  .icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .tab-content {
+    padding: 20px 10px;
+  }
+
+  .experience-item h4,
+  .education-item h4 {
+    font-size: 1.2em;
+  }
+
+  .experience-item p,
+  .education-item p {
+    font-size: 0.9em;
+  }
+}
+
+/* Media query untuk layar dengan lebar maksimum 768px (tablet dan ponsel) */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .navbar a {
+    font-size: 16px;
+    margin: 0 10px;
+  }
+
+  .home-section {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .main-text {
+    font-size: 2.5rem;
+  }
+
+  .about-content {
+    flex-direction: column; /* Atur ulang layout menjadi vertikal */
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 100%; /* Sesuaikan ukuran gambar */
+    margin-bottom: 20px;
+  }
+
+  .about-text {
+    padding: 0;
+  }
+
+  .portfolio-section {
+    padding: 20px;
+  }
+
+  .kartu {
+    width: 140px;
+    height: 210px;
+  }
+
+  .contact-section {
+    padding: 30px 10px;
+  }
+
+  .contact-section h2 {
+    font-size: 1.8em;
+  }
+
+  .contact-section p {
+    font-size: 0.9em;
+  }
+
+  .footer {
+    padding: 15px 10px;
+  }
+}
+
+/* Untuk perangkat dengan lebar layar antara 768px hingga 1024px */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 20px;
+  }
+
+  .home-section {
+    padding: 40px;
+    text-align: center;
+  }
+
+  .about-content {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .about-image {
+    flex: 1 1 100%; /* Buat gambar memenuhi satu baris */
+    max-width: 80%; /* Batasi ukuran maksimal */
+    margin: 0 auto;
+  }
+
+  .skills-wrapper {
+    gap: 30px;
+    justify-content: center; /* Ratakan skill */
+  }
+
+  .kartu {
+    width: 150px;
+    height: 200px;
+  }
+
+  .guest-messages .message {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+}
+
+
+/* Media query untuk layar dengan lebar maksimum 480px (ponsel) */
+@media (max-width: 480px) {
+  .navbar {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .main-text {
+    font-size: 2rem;
+  }
+
+  .about-text p {
+    font-size: 14px;
+  }
+
+  .motivator-photo img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .kartu {
+    width: 100px;
+    height: 150px;
+  }
+
+  .skills-wrapper {
+    gap: 15px;
+  }
+}

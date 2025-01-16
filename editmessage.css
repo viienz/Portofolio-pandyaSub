@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    background: rgba(255, 115, 0, 0.404);
+    margin: 0;
+    padding: 0;
+}
+
+.edit-message-container {
+    background-color: #fff;
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+}
+
+.edit-message-container h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.edit-message-container .form-group {
+    margin-bottom: 15px;
+}
+
+.edit-message-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.edit-message-container input,
+.edit-message-container textarea {
+    width: 96%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.edit-message-container button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #ff7340;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.edit-message-container .btn-secondary {
+    background-color: #6c757d00;
+}
+
+.edit-message-container button:hover {
+    background-color: #a34625;
+}
+
+.edit-message-container .btn-secondary:hover {
+    background-color: #ffffff;
+}
